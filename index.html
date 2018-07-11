@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Encryption</title>
+  
+  <style>
+ 
+    
+    select
+	{
+    width: 90%;
+    height: 62px;
+    margin: 4px 5px;
+    padding: 10px 16px;
+    font-size: 25px;
+    font-family:"Tahoma";
+    box-sizing: border-box;
+    border: 2px solid gray;
+    border-radius: 8px;
+    resize: none; 
+	}
+
+	textarea
+	{
+    width: 90%;
+    height: 120px;
+    margin: 4px 5px;
+    padding: 10px 20px;
+    font-size: 25px;
+    font-family:"Tahoma";
+    box-sizing: border-box;
+    border: 2px solid gray;
+    border-radius: 8px;
+    resize: none;
+    }
+    
+
+	body
+	{
+    font-family:"Tahoma";
+	font-size: 25px;
+    }
+	
+	.moveArea
+	{
+    height: 62px;
+	width: 62px;
+    margin: 4px 5px;
+    padding: 10px 15px;
+    font-size: 25px;
+    font-family:"Tahoma";
+    box-sizing: border-box;
+    border: 2px solid gray;
+    border-radius: 8px;
+	text-align:center;
+	
+	}
+	
+	.keyArea
+	{
+    height: 62px;
+	width: 250px;
+    margin: 4px 5px;
+    padding: 10px 15px;
+    font-size: 25px;
+    font-family:"Tahoma";
+    box-sizing: border-box;
+    border: 2px solid gray;
+    border-radius: 8px;
+	text-align:left;
+	
+	}
+	
+  
+  </style>
+  
+</head>
+  
+<body>
+  </br>
+  <input type="radio" name="przycisk" id = "codebutton" checked> <label for="codebutton">Coding</label> 
+  <input type="radio" name = "przycisk" id= "decodebutton"> <label for="decodebutton">Decoding</label>     
+  
+  <select id = "selector">
+      <option value = "cezar">Caesar cipher </option>
+      <option value = "mors" >Morse code </option>
+	  <option value = "vigener" >Vigenère cipher </option>
+   
+   </select>  
+
+  <textarea placeholder="type text..." id = "area1" autofocus></textarea> </br>
+  <textarea id = "area2" readonly="readonly"></textarea> </br>
+  
+  <div id = "moveArea"> Count of shifts: (0-25) <input class = "moveArea" id ="lp" type = "text" value="3"></input> </div>
+  <div id = "info">Separate the individual characters with a space. </div>
+  <div id = "keyArea"> Key: <input class = "keyArea" id = "keykey" type = "text" value = "" placeholder="Type your key..."></input></div>                    
+	 
+	 
+  <script src="main.js"> </script> 
+  
+</body>
+</html>
